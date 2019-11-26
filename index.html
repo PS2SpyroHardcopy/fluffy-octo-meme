@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Emit testing</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <flipper :class = {card:true,bgroundChange:changeBground} v-for="char in characters" v-bind:name="char.name" v-bind:codename="char.codename" v-on:card-flipped="flippedCounter += 1" v-on:card-unflipped="flippedCounter -= 1" v-on:counterTrue="changeBground = true">
+  </flipper>
+  <liker v-on:likeIncrease = 'likes += 1' ></liker>
+  {{likes}}
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
